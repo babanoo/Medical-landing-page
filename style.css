@@ -2,16 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
+:root {
+    --blue: rgba(3, 96, 217, 1);
+    --white: #ffffff;
+    --gray: rgba(225, 238, 255, 1);
 }
 
 .container {
@@ -26,12 +22,7 @@ body {
 
 }
 
-:root {
-    --blue: rgba(3, 96, 217, 1);
-    --white: #ffffff;
-    --gray: rgba(225, 238, 255, 1);
 
-}
 
 .flex-btwn {
     display: flex;
@@ -52,20 +43,123 @@ header {
 
 }
 
-
-
-.logo a {
-    color: rgba(2, 21, 38, 1);
-    font-size: 32px;
+h1 {
+    font-family: IBM Plex Sans;
+    font-size: 64px;
     font-weight: 700;
+    line-height: 83px;
+    max-width: 572px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 48px;
+    color: rgba(46, 46, 46, 1);
+
+}
+
+h3 {
+    color: rgba(2, 21, 38, 1);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 9px;
+    margin-top: 12px;
+
+}
+
+h4 {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 33px;
+
+
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(22, 48, 72, 1);
+}
+
+.enter-email {
+    background-color: var(--blue);
+    border-radius: 20px;
+    width: 1200px;
+    height: 350px;
+    padding-top: 92px;
+    padding-bottom: 84px;
+    margin: 150px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+form {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 956px;
+    height: 85px;
+    border-radius: 150px;
+    padding: 15px 10px 14px 883px;
 
 
 
 }
 
-a span {
-    color: rgba(3, 96, 217, 1);
+
+
+
+.arrow-icon {
+    color: var(--white);
+    font-size: 25px;
+
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
+
+.arrow {
+    border: none;
+    border-radius: 50px;
+    background-color: var(--blue);
+    cursor: pointer;
+}
+
+input {
+    /* Tell the input to use all the available space */
+    flex-grow: 2;
+    /* And hide the input's outline, so the form looks like the outline */
+    border: none;
+}
+
+input:focus {
+    /* removing the input focus blue box. Put this on the form if you like. */
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 a {
@@ -82,6 +176,29 @@ span {
     font-size: 48px;
 
 }
+
+.black-clr {
+    font-size: 32px;
+    color: rgba(2, 21, 38, 1);
+}
+
+.logo a {
+    color: var(--blue);
+    font-size: 32px;
+    font-weight: 700;
+
+
+
+}
+
+a span {
+    color: rgba(3, 96, 217, 1);
+}
+
+
+
+
+
 
 ul a {
 
@@ -116,12 +233,19 @@ nav li:first-child a {
     background: rgba(3, 96, 217, 1);
     color: rgba(255, 255, 255, 1);
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .white-btn {
     padding: 12px 33px 13px 34px;
     background: rgba(225, 238, 255, 1);
     color: rgba(3, 96, 217, 1);
+    cursor: pointer;
+}
+
+.white-btn:hover {
+    background: rgba(3, 96, 217, 1);
+    color: rgba(255, 255, 255, 1);
 }
 
 .clr-0360D9 {
@@ -143,38 +267,26 @@ nav li:first-child a {
 
 }
 
-h1 {
-    font-family: IBM Plex Sans;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 83px;
-    max-width: 572px;
-}
 
-h1 span {
+
+.favourite {
     font-size: 64px;
-    background-image: url(./images/border.png);
     background-repeat: no-repeat;
     background-position: bottom;
-
-}
-
-p {
-    font-size: 16px;
-    font-weight: 400;
-    color: rgba(22, 48, 72, 1);
-}
-
-h2 {
-    font-weight: 700;
-    font-size: 48px;
-    color: rgba(46, 46, 46, 1);
+    background-image: url(./images/border.png);
 
 }
 
 
 
-.Favourite_Doctor .container {
+
+
+
+
+
+
+
+.flx {
     padding-top: 156px;
     display: flex;
 
@@ -186,6 +298,7 @@ h2 {
     background-repeat: no-repeat;
     background-position: 670px 250px;
     background-size: 850px;
+    overflow: hidden;
 }
 
 .Favourite_Doctor p {
@@ -195,33 +308,52 @@ h2 {
 
 }
 
-.search-btn {
-
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: rgba(255, 255, 255, 1);
     padding: 26px 10px 26px 35px;
     border-radius: 50px;
     border: none;
     width: 590px;
     height: 73px;
+
+
+}
+
+.search-btn {
+    border: none;
+    background-color: var(--white);
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+
+
+select {
     position: relative;
-    z-index: 5;
-
-}
-
-.search-btn a {
+    border: none;
+    cursor: pointer;
     color: rgba(0, 0, 0, 1);
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0 10px;
 
 
 }
 
-.search-btn img:first-child {
-    vertical-align: top;
+select::after {
+    content: "";
+    position: absolute;
+    background-color: blue;
+    background-image: url(./images/doctor-name.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%);
+    top: 50%;
+    left: -2rem;
+
 }
-
-
 
 
 .doctor-image img {
@@ -234,6 +366,11 @@ h2 {
 
 
 }
+
+
+
+
+
 
 .doctor-image {
 
@@ -295,7 +432,7 @@ h2 {
 .Quality_Health {
 
     background-color: var(--white);
-    height: 616px;
+    height: 600px;
     padding-top: 150px;
 }
 
@@ -314,18 +451,24 @@ footer,
     margin-bottom: 150px;
 }
 
+.bg-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(230, 245, 252, 1);
+    border-radius: 50px;
+    width: 92px;
+    height: 92px;
 
-
-
-
-h3 {
-    color: rgba(2, 21, 38, 1);
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 9px;
-    margin-top: 12px;
 
 }
+
+
+
+
+
+
+
 
 .card p {
     max-width: 241px;
@@ -339,19 +482,26 @@ h3 {
     width: 285px;
     height: 285px;
 
+
 }
 
-.blue-card {
+.card:hover {
     border: none;
 
+    background: rgba(3, 96, 217, 1);
+
+
 }
 
-.blue-card h3 {
+.card:hover>* {
     color: rgba(255, 255, 255, 1);
+
 }
 
-.blue-card p {
-    color: rgba(255, 255, 255, 1);
+
+.choose_us {
+    height: 560px;
+    padding-top: 90px;
 }
 
 .choose_us ul {
@@ -365,28 +515,31 @@ h3 {
     margin-bottom: 10px;
 }
 
-.choose_us .container {
+.flx-center {
     display: flex;
     align-items: center;
     gap: 80px;
 
 
-
 }
 
-.our_member .container {
+
+
+.flex {
     display: flex;
     gap: 108px;
     height: 616px;
+    align-items: center;
 }
 
-.our_member h2 {
+
+.member-heading {
     max-width: 502px;
 }
 
 
 
-.member-left p {
+.members p {
     max-width: 419px;
     margin: 22px 0 34px;
 }
@@ -407,7 +560,7 @@ h3 {
 
 
 
-.member-right {
+.member-card {
     background-color: rgba(255, 255, 255, 1);
     border-radius: 20px;
     width: 590px;
@@ -416,7 +569,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     column-gap: 80px;
-
+    border: 1px solid rgba(168, 168, 168, 1)
 }
 
 .member-person {
@@ -427,7 +580,7 @@ h3 {
     margin-top: -30px;
 }
 
-.member-right h4 {
+.member-card h4 {
     color: rgba(46, 46, 46, 1);
     font-size: 16px;
 
@@ -435,7 +588,7 @@ h3 {
 
 .Quality_Health {
 
-    height: 1310px;
+    height: 1290px;
 }
 
 .member-paragraph {
@@ -460,42 +613,33 @@ h3 {
 
 
 
-.learn-more img {
-    vertical-align: middle;
+
+
+.learn-more::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 16px;
+    background-repeat: no-repeat;
+    top: 30%;
+    left: 110%;
+    background-image: url(./images/slash\ 2.png);
+}
+
+.learn-more {
+    padding-right: 4px;
+    position: relative;
+
 }
 
 
 
 .subscribe {
-
-    border-radius: 20px;
-    width: 1200px;
-    height: 350px;
-    padding-top: 92px;
-    height: 400px;
-    margin-top: 150px;
-    margin-bottom: 150px;
-
-
-}
-
-.subscribe h2 {
-    color: rgba(255, 255, 255, 1);
+    color: var(--white);
     font-size: 40px;
     text-align: center;
 
 }
-
-.subscribe button {
-    background: rgba(255, 255, 255, 1);
-    border: none;
-    padding: 15px 17px 14px 883px;
-    margin: 37px 122px 84px 122px;
-    border-radius: 150px;
-
-
-}
-
 
 .main-footer {
     display: flex;
@@ -526,18 +670,12 @@ footer p {
     margin-bottom: 25px;
 }
 
-h4 {
-    color: rgba(255, 255, 255, 1);
-    font-weight: 600;
-    font-size: 24px;
-    margin-bottom: 33px;
 
 
-}
-
-.footer-social-media img {
+.social-media img {
     margin-right: 12px;
     margin-top: 20px;
+    margin: 20px 12px 0 0;
 }
 
 .join-us a {
@@ -549,7 +687,7 @@ h4 {
 
 .footer-rights {
     border-top: 1px solid rgba(255, 255, 255, 1);
-    padding: 24px 500px 0px 500px;
+    padding: 25px 500px 0;
     margin-top: 85.34px;
-    margin-bottom: 25px;
+
 }
