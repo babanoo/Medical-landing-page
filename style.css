@@ -380,12 +380,7 @@ select {
 
 .proportion {
 
-    display: flex;
-    gap: 40px;
-    height: 134px;
-    width: 100%;
-    padding-top: 14px;
-    margin-top: -400px;
+
     position: relative;
     z-index: 2;
 
@@ -396,9 +391,16 @@ select {
 
 }
 
-.proportion-support {
-    margin-left: 150px;
+.Flex {
+    display: flex;
+    gap: 40px;
+    height: 134px;
+    width: 100%;
+    padding-top: 14px;
+    margin-top: -400px;
 }
+
+
 
 .propotion-doctors {
     border-right: 1px solid rgba(255, 255, 255, 1);
